@@ -32,6 +32,7 @@
     --color-card:rgba(33, 150, 243, 0.9);
     --modal-background:rgba(0, 0, 0, 0.2);
     --modal-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    --modal-button:rgba(0, 0, 0, 0.1);
 }
 h1,
 h2,
@@ -270,7 +271,7 @@ a:focus .icon-social {
   font-size: 16px;
   line-height: 1.87;
   padding: 6px 22px;
-  transition-property: background-color, box-shadow;
+  transition-property: background-color, box-shadow, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -339,24 +340,27 @@ a:focus .icon-social {
   margin-left: 30px;
   margin-bottom: 30px;
 }
-.text-content {
-  position: absolute;
+.card-text {
+  /* position: absolute; */
   bottom: 0;
   opacity: 1;
-  
-  display: inline-block;
-  width: 100%;
-  padding-top: 27px;
-  padding-bottom: 27px;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 370px;
+  height: 70px;
+  background: linear-gradient(var(--image-background-text));
+}
 
-  text-align: center;
+.text-content {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   color: var(--primary-white-color);
   text-transform: uppercase;
-  background: linear-gradient(var(--image-background-text));
+ 
 }
 .team {
   display: flex;
@@ -630,8 +634,20 @@ a:focus .icon-footer {
 
   height: 30px;
   width: 30px;
-  background-color: var(--color-not-img)
-  border: 0;
-  border-radius: 50%;
+  background-color: var(--primary-white-color);
+
+  border: 1px solid var(--modal-button);
+ 
+  border-radius: 100%;
+
   cursor: pointer;
+
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-backdrop:hover,
+.close-backdrop:focus {
+  
+  transform: scale(1.1);
 }
