@@ -229,11 +229,6 @@ a:focus .icon-social {
   fill: var(--primary-white-color);
 }
 
-.link-button:hover,
-.link-button:focus {
-  fill: var(--icon-not-active);
-  background-color: var(--accent-color);
-}
 .title-name {
   color: var(--primary-white-color);
   text-transform: uppercase;
@@ -465,7 +460,7 @@ a:focus .icon-social {
   height: 100%;
   background-color: var(--color-card);
   transform: translatey(100%);
-  transition-property: transform;
+  transition-property: transform, opacity;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--primary-white-color);
